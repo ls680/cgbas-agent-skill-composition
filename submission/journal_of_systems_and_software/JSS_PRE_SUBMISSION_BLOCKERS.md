@@ -1,17 +1,14 @@
-# JSS pre-submission blockers
+# JSS pre-submission verification
 
-The target-specific manuscript compiles and the author metadata are complete.
-One item must be completed before the manuscript is sent to the Journal of
-Systems and Software:
+The target-specific manuscript compiles, the author metadata are complete, and
+the first public artifact version is archived.
 
-1. Publish the study-specific code, mutation records, paired traces, analysis
-   scripts, and reproducibility instructions in a public repository that issues
-   a DOI (for example, Zenodo linked to the final GitHub release).
-2. Replace the future-tense Data and Code Availability statement in the
-   manuscript with the permanent DOI and URL.
-3. Add the same DOI and URL to the submission metadata and cover letter, and
-   verify that the release contains no credentials, private data, or
-   unrelicensed third-party assets.
+Verified public locations:
 
-Do not submit while the DOI and permanent URL are still absent. No external
-repository was created or modified by this local packaging step.
+- GitHub: https://github.com/ls680/cgbas-agent-skill-composition
+- Zenodo concept DOI: https://doi.org/10.5281/zenodo.22855171
+- Zenodo version 0.1.0: https://doi.org/10.5281/zenodo.22855172
+- Zenodo version 0.1.1: https://doi.org/10.5281/zenodo.22855354
+
+Before final submission, confirm that the GitHub repository contains the latest
+commit and that the Zenodo concept DOI resolves to the intended public version.

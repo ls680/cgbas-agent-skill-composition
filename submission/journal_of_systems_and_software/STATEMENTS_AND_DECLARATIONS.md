@@ -14,7 +14,7 @@ The authors declare that they have no known competing financial or non-financial
 
 ## Data and code availability
 
-The study-specific mutation records, paired traces, analysis scripts, and reproduction materials are prepared for release in a public repository with a DOI. The repository DOI and permanent URL must be inserted before submission. ALFWorld, ScienceWorld, and model-weight assets remain subject to their respective upstream licenses and are identified rather than redistributed.
+The study-specific mutation records, paired traces, analysis scripts, and reproduction materials are openly available in Zenodo at https://doi.org/10.5281/zenodo.22855171 and in the public GitHub repository https://github.com/ls680/cgbas-agent-skill-composition. ALFWorld, ScienceWorld, and model-weight assets remain subject to their respective upstream licenses and are identified rather than redistributed.
 
 ## Acknowledgements
 

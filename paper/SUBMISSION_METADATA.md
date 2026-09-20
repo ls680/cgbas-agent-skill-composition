@@ -11,7 +11,8 @@
 - Working template: journal-neutral anonymous master; target-specific formatting is deferred until authorship and submission route are fixed
 - Corresponding author: pending
 - Author names and affiliations: pending
-- Anonymous repository URL or DOI: pending public release
+- Public repository: https://github.com/ls680/cgbas-agent-skill-composition
+- Zenodo concept DOI: https://doi.org/10.5281/zenodo.22855171
 - Funding, conflict, author-contribution, data-license, and AI-use declarations: pending author input
 
 The title names the intervention and unit of repair. It does not claim that every

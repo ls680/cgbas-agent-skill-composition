@@ -8,7 +8,7 @@ Synthesis for LLM-Agent Skill Composition**.
 Public repository: https://github.com/ls680/cgbas-agent-skill-composition
 
 The versioned reproducibility archive is linked to the repository through the
-Zenodo record listed in the release metadata after publication.
+Zenodo concept DOI: https://doi.org/10.5281/zenodo.22855171.
 
 The study asks whether an already diagnosed cross-Skill interface conflict can
 be repaired by a witness-backed boundary adapter without rewriting the

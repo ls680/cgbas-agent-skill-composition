@@ -26,10 +26,10 @@
 - Acknowledgements: None.
 - Author contributions: See the Author Contributions section in the manuscript.
 - Public repository: https://github.com/ls680/cgbas-agent-skill-composition
-- Data/code: the study-specific release is prepared; the permanent Zenodo DOI must be inserted before submission.
+- Data/code: openly available in Zenodo at https://doi.org/10.5281/zenodo.22855171 and GitHub at https://github.com/ls680/cgbas-agent-skill-composition.
 - Third-party assets: ALFWorld, ScienceWorld, and model weights are referenced under their upstream licenses and are not redistributed in the manuscript source package.
 - Generative-AI disclosure: use the final wording in the manuscript only after the authors verify it against the actual writing workflow and the journal policy.
 
 ## Submission notes
 
-The manuscript is supplied as a compiled PDF and an editable LaTeX source archive. Figures and tables are embedded in the manuscript; no separate figure upload is required at initial submission. The DOI-backed artifact release is a submission blocker and is tracked in `JSS_PRE_SUBMISSION_BLOCKERS.md`.
+The manuscript is supplied as a compiled PDF and an editable LaTeX source archive. Figures and tables are embedded in the manuscript; no separate figure upload is required at initial submission. The DOI-backed artifact release is complete; `JSS_PRE_SUBMISSION_BLOCKERS.md` records the verification state.
