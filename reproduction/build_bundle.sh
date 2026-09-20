@@ -11,7 +11,9 @@ tar \
   --sort=name \
   --mtime='2026-09-09 00:00:00Z' \
   --owner=0 --group=0 --numeric-owner \
+  --exclude="$project_name/.git" \
   --exclude="$project_name/.pytest_cache" \
+  --exclude="$project_name/submission/*/build" \
   --exclude="$project_name/**/__pycache__" \
   --exclude="$project_name/paper/**/*.aux" \
   --exclude="$project_name/paper/**/*.bbl" \
