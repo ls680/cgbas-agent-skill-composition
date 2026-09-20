@@ -1,0 +1,15 @@
+{
+  "status": "paper13_development_local_llm_adapter",
+  "model": {
+    "id": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "label": "qwen3_4b"
+  },
+  "seed": 0,
+  "maximum_generation_tokens": 192,
+  "public_incidents_sha256": "5250ce44ba865efbcf6500c04083f1c0ddd0d99cdd9f9e55950255d0ae5a6592",
+  "system_sha256": "fa5493513a64bdcabb3d724ebc9018e3d3102fa91b6f947806c846376d928006",
+  "hidden_labels_accessed": false,
+  "matched_correction_programs_accessed": false,
+  "native_outcomes_accessed": false
+}

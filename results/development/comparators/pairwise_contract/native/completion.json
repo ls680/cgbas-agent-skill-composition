@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "arm": "pairwise_contract",
+  "compositions": 403,
+  "native_successes": 173,
+  "technical_errors": 0,
+  "initial_state_matches": 403,
+  "unsupported_adapter_commands": 60,
+  "by_environment": {
+    "alfworld": 221,
+    "scienceworld": 182
+  },
+  "outcomes_sha256": "9867fddd02b4d42b8160925d42e1e191f2d3d59aeafc53f05f2d409353b68acf"
+}

@@ -1,0 +1,11 @@
+accelerate==1.14.0
+alfworld==0.4.2
+jericho==3.3.1
+numpy==2.3.2
+pytest==8.4.2
+safetensors==0.8.0
+scipy==1.18.1
+scienceworld==1.2.3
+sentencepiece==0.2.2
+textworld==1.7.0
+transformers==4.57.6

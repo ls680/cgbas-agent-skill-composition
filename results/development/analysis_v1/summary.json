@@ -1,0 +1,81 @@
+{
+  "status": "development_native_analyzed",
+  "all": {
+    "n": 399,
+    "native_success_rate": 0.8145363408521303,
+    "constrained_success_rate": 0.40100250626566414,
+    "invalid_action_free_rate": 0.44611528822055135,
+    "initial_state_match_rate": 1.0
+  },
+  "causal_conflicts": {
+    "n": 252,
+    "native_success_rate": 0.7063492063492064,
+    "constrained_success_rate": 0.3888888888888889,
+    "invalid_action_free_rate": 0.4603174603174603,
+    "initial_state_match_rate": 1.0
+  },
+  "healthy_controls": {
+    "n": 147,
+    "native_success_rate": 1.0,
+    "constrained_success_rate": 0.4217687074829932,
+    "invalid_action_free_rate": 0.4217687074829932,
+    "initial_state_match_rate": 1.0
+  },
+  "no_repair_causal_success_rate": 0.0,
+  "matched_correction_causal_success_rate": 1.0,
+  "by_class": {
+    "clobber": {
+      "n": 45,
+      "native_success_rate": 0.7777777777777778,
+      "constrained_success_rate": 0.3333333333333333,
+      "invalid_action_free_rate": 0.3333333333333333,
+      "initial_state_match_rate": 1.0
+    },
+    "no_conflict": {
+      "n": 147,
+      "native_success_rate": 1.0,
+      "constrained_success_rate": 0.4217687074829932,
+      "invalid_action_free_rate": 0.4217687074829932,
+      "initial_state_match_rate": 1.0
+    },
+    "rely_gap": {
+      "n": 79,
+      "native_success_rate": 0.31645569620253167,
+      "constrained_success_rate": 0.27848101265822783,
+      "invalid_action_free_rate": 0.5063291139240507,
+      "initial_state_match_rate": 1.0
+    },
+    "role_mismatch": {
+      "n": 83,
+      "native_success_rate": 1.0,
+      "constrained_success_rate": 0.5542168674698795,
+      "invalid_action_free_rate": 0.5542168674698795,
+      "initial_state_match_rate": 1.0
+    },
+    "stale_validation": {
+      "n": 45,
+      "native_success_rate": 0.7777777777777778,
+      "constrained_success_rate": 0.3333333333333333,
+      "invalid_action_free_rate": 0.3333333333333333,
+      "initial_state_match_rate": 1.0
+    }
+  },
+  "by_environment": {
+    "alfworld": {
+      "n": 221,
+      "native_success_rate": 0.8914027149321267,
+      "constrained_success_rate": 0.7104072398190046,
+      "invalid_action_free_rate": 0.7918552036199095,
+      "initial_state_match_rate": 1.0
+    },
+    "scienceworld": {
+      "n": 178,
+      "native_success_rate": 0.7191011235955056,
+      "constrained_success_rate": 0.016853932584269662,
+      "invalid_action_free_rate": 0.016853932584269662,
+      "initial_state_match_rate": 1.0
+    }
+  },
+  "technical_errors": 0,
+  "wrapper_skips": 0
+}

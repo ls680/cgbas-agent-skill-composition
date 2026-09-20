@@ -1,0 +1,83 @@
+{
+  "status": "development_native_analyzed",
+  "arm": "llm_mistral7b_v03_v2",
+  "programs": "results/development/llm_adapters_v2/mistral7b_v03/programs.jsonl",
+  "all": {
+    "n": 403,
+    "native_success_rate": 0.6923076923076923,
+    "constrained_success_rate": 0.6923076923076923,
+    "adapter_command_support_rate": 1.0,
+    "initial_state_match_rate": 1.0
+  },
+  "causal_conflicts": {
+    "n": 256,
+    "native_success_rate": 0.515625,
+    "constrained_success_rate": 0.515625,
+    "adapter_command_support_rate": 1.0,
+    "initial_state_match_rate": 1.0
+  },
+  "healthy_controls": {
+    "n": 147,
+    "native_success_rate": 1.0,
+    "constrained_success_rate": 1.0,
+    "adapter_command_support_rate": 1.0,
+    "initial_state_match_rate": 1.0
+  },
+  "no_repair_causal_success_rate": 0.0,
+  "matched_correction_causal_success_rate": 1.0,
+  "by_class": {
+    "clobber": {
+      "n": 45,
+      "native_success_rate": 1.0,
+      "constrained_success_rate": 1.0,
+      "adapter_command_support_rate": 1.0,
+      "initial_state_match_rate": 1.0
+    },
+    "no_conflict": {
+      "n": 147,
+      "native_success_rate": 1.0,
+      "constrained_success_rate": 1.0,
+      "adapter_command_support_rate": 1.0,
+      "initial_state_match_rate": 1.0
+    },
+    "rely_gap": {
+      "n": 83,
+      "native_success_rate": 0.5542168674698795,
+      "constrained_success_rate": 0.5542168674698795,
+      "adapter_command_support_rate": 1.0,
+      "initial_state_match_rate": 1.0
+    },
+    "role_mismatch": {
+      "n": 83,
+      "native_success_rate": 0.0,
+      "constrained_success_rate": 0.0,
+      "adapter_command_support_rate": 1.0,
+      "initial_state_match_rate": 1.0
+    },
+    "stale_validation": {
+      "n": 45,
+      "native_success_rate": 0.9111111111111111,
+      "constrained_success_rate": 0.9111111111111111,
+      "adapter_command_support_rate": 1.0,
+      "initial_state_match_rate": 1.0
+    }
+  },
+  "by_environment": {
+    "alfworld": {
+      "n": 221,
+      "native_success_rate": 0.751131221719457,
+      "constrained_success_rate": 0.751131221719457,
+      "adapter_command_support_rate": 1.0,
+      "initial_state_match_rate": 1.0
+    },
+    "scienceworld": {
+      "n": 182,
+      "native_success_rate": 0.6208791208791209,
+      "constrained_success_rate": 0.6208791208791209,
+      "adapter_command_support_rate": 1.0,
+      "initial_state_match_rate": 1.0
+    }
+  },
+  "technical_errors": 0,
+  "wrapper_skips": 42
+}

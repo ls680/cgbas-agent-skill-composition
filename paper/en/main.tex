@@ -1,0 +1,444 @@
+\documentclass[10pt]{article}
+\usepackage[a4paper,margin=20mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype,url,xcolor,float}
+\usepackage[section]{placeins}
+\usepackage[hidelinks]{hyperref}
+\usepackage[numbers,sort&compress]{natbib}
+\setlength{\emergencystretch}{2em}
+\input{../results_macros.tex}
+
+\title{Repair the Boundary, Not the Skills: Contract-Guided Adapter Synthesis for LLM-Agent Skill Composition}
+\author{Anonymous Authors}
+\date{Anonymous manuscript, September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Reusable Skills let LLM agents preserve successful procedures, but individually
+witnessed components can fail when their rely conditions, role bindings, live
+state, or validations disagree at composition boundaries. Rewriting a component
+widens its regression surface; reverting the whole chain discards unrelated
+changes. We study a narrower alternative: compile one executable mediator at the
+diagnosed boundary while keeping the component artifacts unchanged. We introduce
+Contract-Guided Boundary Adapter Synthesis (CGBAS), which combines typed
+rely/guarantee contracts, downstream liveness, and retained successful provenance
+to insert a missing witness prefix, specialize a consumer role, or guard a
+destructive call before execution. A failed first mechanism revision is retained.
+After exposed development on \DevelopmentIncidentCount{} composition incidents,
+we froze the method, endpoint, strongest comparator, three model revisions, and
+analysis before selecting confirmation tasks. Independent confirmation uses
+\ConfirmationRosterCount{} identifier-disjoint ALFWorld and ScienceWorld tasks,
+yielding \ValidCausalCount{} state-matched causal conflicts and
+\ValidControlCount{} healthy controls. CGBAS achieves
+\PrimaryMethodRate\% constrained native repair success versus
+\PrimaryComparatorRate\% for the frozen strongest local comparator, a paired
+gain of \PrimaryGain{} percentage points (95\% family-stratified task-cluster
+bootstrap CI \PrimaryCILow--\PrimaryCIHigh; two-sided task sign-randomization
+$p=\PrimaryP$), while healthy-control loss is \ControlLoss{} points. The result
+is bounded: CGBAS assumes a correct diagnosis and current successful provenance,
+and a single adapter call can contain a long witness prefix. It does not repair
+arbitrary production failures or establish that local adaptation always beats
+replanning.
+\end{abstract}
+
+\noindent\textbf{Keywords:} LLM agents; agent skills; skill composition;
+interface repair; design by contract; provenance; ALFWorld; ScienceWorld
+
+\section{Introduction}
+
+LLM-agent Skills package reusable procedures, scripts, tool conventions, and
+validation instructions. Reuse turns an isolated successful trajectory into a
+software artifact that can be selected and composed in later tasks. Composition,
+however, creates failure modes that are not visible when each Skill is evaluated
+alone. A consumer may rely on state its predecessor never established; two calls
+may bind the same semantic role to different objects; an intermediate call may
+destroy state needed later; or a validation may become stale after an effect.
+
+Recent systems jointly predict Skill subsets, counts, and execution order
+\citep{zhao2026skillcomposer}, compile Skills into typed execution graphs with
+local repair operators \citep{xia2026grasp}, and manage libraries through typed
+contracts and compatibility diagnoses \citep{pu2026skillops}. Provenance auditing
+attributes reuse to operational evidence \citep{chen2026multitrace}, while
+persistent decision histories support repeated Skill evolution
+\citep{li2026skillhone}. These advances expose a specific maintenance question
+that remains easy to conflate with planning: once a particular interface has
+already been diagnosed, must a maintainer rewrite a component or replace the
+entire plan, or can the interface itself be repaired?
+
+The distinction matters operationally. A whole-Skill edit invalidates earlier
+evidence for all of that Skill's uses. Whole-chain rollback restores a witnessed
+version but discards unaffected calls and cannot preserve independent changes.
+Rejecting the composition prevents harm but loses capability. A boundary adapter
+offers a fourth choice: retain component identities and mediate only the diagnosed
+handoff. Such an adapter is useful only if it succeeds in the native environment,
+uses supported actions, preserves provenance, and does not damage healthy chains.
+
+We propose Contract-Guided Boundary Adapter Synthesis (CGBAS). Given an ordered
+candidate chain, a minimal conflict diagnosis, a public task objective, and a
+provenance-linked successful witness chain, CGBAS performs at most one boundary
+operation. It can replay the witness prefix omitted before a fixed consumer,
+replace a mismatched consumer with its witnessed role-compatible counterpart, or
+suppress a diagnosed non-goal destructive call before it fires. Healthy chains
+are unchanged. The method therefore treats the adapter as an executable patch to
+an interface, not as a newly generated whole plan.
+
+The evaluation is designed around three validity risks. First, native task
+success is distinguished from static contract closure. Second, comparison with
+LLMs is schema-matched: three revision-pinned open instruction models receive the
+same incident, diagnosis, witness catalog, and four allowed operations. Third,
+development choices are separated from confirmation. Exposed records from an
+earlier diagnosis study are used to revise the mechanism twice; every failed run
+is retained. Method, comparator, models, endpoint, gates, environment executors,
+and analysis are then hash-locked before a content-blind, zero-overlap task roster
+is selected.
+
+This paper contributes:
+\begin{itemize}
+  \item a boundary-repair formulation with an explicit invariant: preserve all
+  unaffected component call identities and introduce at most one adapter call;
+  \item CGBAS, which turns rely/guarantee, liveness, role, validation, and
+  successful provenance evidence into three executable repair operators;
+  \item a causal native evaluation with no repair, a provenance-free pairwise
+  heuristic, whole-chain rollback, and three schema-matched local LLM baselines;
+  and
+  \item an auditable development/confirmation workflow across ALFWorld and
+  ScienceWorld, including invalid source tasks, failed revisions, clustered
+  inference, action cost, and single-RTX-3090 reproduction materials.
+\end{itemize}
+
+We ask: \textbf{RQ1}, can a contract- and provenance-guided boundary adapter
+restore native success on independently selected composition conflicts?
+\textbf{RQ2}, does it exceed the strongest frozen deployable local comparator
+without regressing healthy chains? \textbf{RQ3}, which assumptions and action
+costs bound the result?
+
+\begin{figure}[t]
+\centering
+\fbox{\begin{minipage}{0.94\linewidth}\centering
+Exposed development $\rightarrow$ two mechanism revisions $\rightarrow$
+method/comparator/analysis hash lock\\[3pt]
+$\Downarrow$\\[3pt]
+Content-blind zero-overlap roster $\rightarrow$ successful source witnesses
+$\rightarrow$ frozen deterministic and LLM programs\\[3pt]
+$\Downarrow$\\[3pt]
+State-matched candidate/correction execution $\rightarrow$ seven-arm native
+replay $\rightarrow$ task-clustered inference
+\end{minipage}}
+\caption{Evidence order. Confirmation outcomes do not exist until the roster,
+source incidents, and every evaluated program are frozen.}
+\label{fig:evidence-order}
+\end{figure}
+
+\section{Related Work}
+
+\paragraph{Skill selection and composition.}
+Generative Skill Composition formalizes selection, count, and order as one
+structured prediction problem \citep{zhao2026skillcomposer}. GraSP inserts a
+compilation layer between retrieval and execution, representing dependencies as
+a typed DAG with node verification and locality-bounded repair
+\citep{xia2026grasp}. SkillFuzz uses extracted contracts to prioritize interacting
+Skill sets before execution \citep{hu2026skillfuzz}. These systems motivate
+composition-level reasoning. Our unit is later and narrower: selection and order
+are held fixed, one boundary is already diagnosed, and the outcome is whether a
+single mediator can restore a state-matched native task without rewriting the
+components.
+
+\paragraph{Skill lifecycle maintenance and auditing.}
+SkillOps frames accumulating compatibility and validation defects as Skill
+technical debt and supplies a method-agnostic maintenance layer
+\citep{pu2026skillops}. SkillHone retains diagnoses, revisions, evidence, and
+rejected alternatives across sessions \citep{li2026skillhone}. SkillAudit uses
+paired trajectories and fixed structural verification to guide repair without
+hidden rewards during evolution \citep{gao2026skillaudit}. SkillCoach separates
+process quality from outcome-only success \citep{zhu2026skillcoach}. We adopt
+these lifecycle lessons in the experimental design: decision history is retained,
+candidate and correction executions are paired, and locality, command support,
+provenance, and cost accompany end-task success. The method differs by editing an
+execution boundary instead of a Skill document.
+
+\paragraph{Contracts and provenance.}
+Preconditions and postconditions make program assumptions explicit
+\citep{hoare1969axiomatic,meyer1992contract}; rely/guarantee reasoning distinguishes
+what one component assumes from what another establishes in an interfering state
+\citep{jones1983rely}. We use these ideas as an operational abstraction over text
+simulator calls, not as a proof of arbitrary concurrent programs. SkillTrace
+shows that Skill provenance is distributed across expression, implementation,
+and operation \citep{chen2026multitrace}. CGBAS uses the operational trace more
+narrowly: every added command or role wrapper must cite a retained successful
+witness, unless the native environment itself accepts the command.
+
+\section{Problem Formulation}
+
+An ordered Skill composition is $C=(c_1,\ldots,c_n)$. Each call contains immutable
+actions $A_i$, an identifier, provenance witnesses, and a contract
+\begin{equation}
+  K_i=(R_i,G_i,D_i,B_i,V_i),
+\end{equation}
+where $R_i$ is the rely set, $G_i$ the guaranteed predicates, $D_i$ the clobbered
+predicates, $B_i$ semantic role bindings, and $V_i$ validated predicates. Forward
+interpretation updates the abstract state as
+\begin{equation}
+  S_i=(S_{i-1}\setminus D_i)\cup G_i,
+\end{equation}
+provided $R_i\subseteq S_{i-1}$ and bindings remain compatible. Backward liveness
+marks predicates required by any downstream call or by goal completion.
+
+Four diagnosed conflicts are in scope: a \emph{rely gap} when a consumer requires
+an absent predicate; a \emph{role mismatch} when an existing role is rebound to a
+different object; a \emph{clobber} when an applicable effect destroys a live
+predicate; and \emph{stale validation} when such destruction occurs after the
+predicate was checked. A healthy chain has none of these conflicts and establishes
+goal completion.
+
+Let $W=(w_1,\ldots,w_m)$ be a successful provenance-linked chain for the same
+task. An admissible repair $T(C,W)$ may add at most one adapter call at the
+diagnosed boundary. Calls not wrapped by that adapter retain their identifiers
+and contents. The primary endpoint is constrained native repair success:
+\begin{equation}
+Y=\mathbb{1}[\text{native goal success}\land\text{locality}\land
+\text{provenance}\land\text{adapter-command support}].
+\end{equation}
+An adapter command is supported if it is copied exactly from retained successful
+provenance or accepted by the native environment. Rejected exploratory commands
+already present in immutable component calls are reported separately.
+
+\section{Contract-Guided Boundary Adapters}
+
+\subsection{Diagnosis and repair slot}
+CGBAS scans the candidate chain once, maintaining abstract state, live bindings,
+and validation positions. The first conflict yields its class, evidence, and a
+minimal pair of call identifiers. The diagnosis is supplied rather than evaluated
+as a contribution in this paper; the intervention starts at the returned slot.
+
+\subsection{Missing-producer prefix}
+For a rely gap before consumer $c_j$, CGBAS locates the same immutable consumer
+identifier in $W$. It selects the ordered witness calls before that consumer that
+are absent from the current prefix, concatenates their actions into one adapter,
+and unions their contracts and witness digests. Unlike choosing the shortest call
+that establishes one missing predicate, this preserves objective-relevant
+processing such as clean, cool, heat, or measure. The operator can therefore be
+one call-level modification yet contain many environment actions.
+
+\subsection{Witnessed role wrapper}
+For a role mismatch, the live producer bindings are compared with successful
+goal-completing witness calls. CGBAS chooses the shortest witnessed consumer whose
+non-destination roles match live bindings, replaces the mismatched execution slot
+with a wrapper around that call, and records both source and replaced identifiers.
+The component artifact is retained; only this invocation is mediated.
+
+\subsection{Pre-execution preservation guard}
+Post-effect compensation is impossible when a destructive action terminates an
+episode or irreversibly changes the world. For clobber and stale validation,
+CGBAS therefore checks effect applicability, goal satisfaction, and downstream
+liveness before execution. A diagnosed non-goal destructive call is wrapped by a
+zero-action guard. Its original identifier, actions, effect evidence, and witness
+remain in adapter metadata. The guard preserves live state rather than attempting
+to reconstruct it afterward.
+
+\subsection{Complexity and invariants}
+Diagnosis is linear in the calls plus contract-set operations. Witness-prefix
+lookup is linear in the witness chain; role selection scans goal-completing witness
+calls; a guard requires one forward location scan. The method performs no model
+inference. It preserves at most one changed call boundary and leaves healthy
+chains unchanged. This is call-level locality, not a constant action-cost claim.
+
+\section{Experimental Method}
+
+\subsection{Development and revision history}
+Development uses 403 exposed incidents from a completed earlier diagnostic study:
+256 causal conflicts and 147 healthy controls spanning ALFWorld and ScienceWorld
+\citep{shridhar2021alfworld,wang2022scienceworld}. Revision 1 inserted the shortest
+predicate producer and attempted post-clobber compensation. Its conflict success
+was 70.6\%, below the frozen 75\% gate. Failure analysis showed omitted
+objective-relevant prefixes and terminal ScienceWorld clobbers. Revision 2 moved
+the destructive intervention before execution and retained the whole missing
+witness prefix. The first revision's code, outputs, 399 native trajectories, and
+four omitted abstentions remain in the artifact.
+
+Before confirmation, we compare Revision 2 with no repair, a pairwise contract
+heuristic without provenance or global liveness, whole-chain rollback, and three
+local instruction models: Qwen3-4B-Instruct-2507, Phi-4-mini-instruct, and
+Mistral-7B-Instruct-v0.3. The models receive identical public inputs and an
+identical output schema restricted to no-op, ordered witness-prefix insertion,
+witnessed consumer replacement, preservation guard, or abstention. Invalid output
+and abstention execute the unchanged candidate and count as failure. A first,
+Revision-1-shaped LLM schema was recognized as unfair and retained but excluded;
+all three models were rerun under the matched schema before comparator selection.
+
+The strongest deployable local method by development constrained success is
+frozen as the primary comparator. Whole-chain rollback is reported as an ordinary
+success upper bound, but is not eligible because it violates the primary locality
+endpoint. Development advances only with at least 180 causal cases and 60
+controls, at least 75\% constrained success, at least a 15-point gain over the
+strongest eligible comparator, positive repair gain in every class and both
+environments, at most 2-point control loss, and at least 95\% adapter-command
+support.
+
+\subsection{Independent confirmation}
+The union of task identifiers previously exposed by Papers 1--12 and Paper 13
+development is constructed before selection. A salted hash ranks eligible tasks
+using only environment, family, identifier, official split, compatibility flag,
+and exclusion status. The frozen roster contains 40 untouched ALFWorld train
+instances balanced across five families and all 34 eligible untouched
+ScienceWorld use-thermometer test variations. These ALFWorld tasks support
+task-level transfer under zero overlap, not a claim about the official test split.
+
+Native expert or gold trajectories are collected after the roster freeze. Failed
+sources are retained and excluded, not replaced. For each successful source, the
+constructor creates a healthy control and four possible one-boundary mutations:
+omit the producer prefix, substitute a same-family donor consumer with a different
+subject, insert an applicable non-goal clobber, or validate immediately before the
+clobber. Mutation specifications and public incidents are frozen before candidate
+or correction execution.
+
+All deterministic and LLM program files are then frozen. Only afterward do we
+execute the candidate and matched correction from the same native initial state.
+A causal label requires successful source provenance, candidate failure,
+matched-correction success, two matching initial states, and no technical error.
+A control requires source and unchanged-candidate success with a matching state.
+Invalid mutations are excluded rather than relabeled as controls. Every program
+arm is independently replayed on every planned event; technical errors remain
+failures.
+Figure~\ref{fig:evidence-order} summarizes this ordering; file hashes make each
+boundary between stages auditable.
+
+\subsection{Inference and gates}
+The primary comparison is paired constrained success between CGBAS and the frozen
+strongest comparator over valid causal conflicts. Because multiple conflict
+classes derive from one source task, inference clusters them by task. We use
+10,000 family/environment-stratified task bootstrap replicates for a 95\% interval
+and a two-sided 100,000-replicate paired task sign-randomization test
+\citep{efron1994bootstrap}. Confirmation requires at least 60 source tasks, 180
+causal conflicts, 60 controls, and 30 examples per conflict class; CGBAS success
+at least 75\%; at least a 15-point comparator gain with the interval above zero
+and $p\leq0.01$; positive repair gain over no repair in every class and both
+environments; at most 2-point control loss; and complete locality, provenance,
+initial-state, command-support, and technical-error audits.
+
+\section{Results}
+
+\subsection{Development gate}
+\input{../table_development.tex}
+
+Revision 2 reaches \DevelopmentMethodRate\% constrained success across
+\DevelopmentCausalCount{} causal conflicts. Mistral-7B is selected automatically
+as the strongest eligible comparator at \DevelopmentComparatorRate\%, leaving a
+\DevelopmentGain{}-point development difference. Healthy-control success remains
+\DevelopmentControlRate\%. Whole-chain rollback reaches
+\DevelopmentRollbackRate\% ordinary success but fails the locality endpoint.
+
+\subsection{Independent primary result}
+\input{../table_main.tex}
+
+Of \ConfirmationRosterCount{} roster tasks, \SuccessfulSourceCount{} yield valid
+source trajectories. The state-matched validity rules retain
+\ValidCausalCount{} causal conflicts and \ValidControlCount{} controls. CGBAS
+achieves \PrimaryMethodRate\% constrained success, compared with
+\PrimaryComparatorRate\% for the frozen comparator. The paired difference is
+\PrimaryGain{} points; its 95\% clustered interval is
+\PrimaryCILow--\PrimaryCIHigh{} and the paired task sign-randomization test gives
+$p=\PrimaryP$. The predeclared confirmation status is \ConfirmationStatus{}.
+
+\subsection{Conflict classes, environments, and cost}
+\input{../table_classes.tex}
+\input{../table_environments.tex}
+
+Class-level repair gains over no repair are reported separately from the overall
+comparison with the strongest baseline. This prevents a baseline tie in one
+mechanically easier class from being hidden by averaging. Environment results
+likewise preserve all conflict instances while clustering inference at the source
+task. CGBAS proposes \MeanAdapterActions{} adapter actions per causal repair on
+average and at most \MaxAdapterActions{}. The rely-gap cost is
+\MeanRelyAdapterActions{} actions on average, making explicit the difference
+between one call-level boundary edit and a short execution.
+
+\subsection{Integrity audits}
+\input{../table_audits.tex}
+
+The roster has zero task-identifier overlap with the prior-exposure union. All
+program artifacts precede candidate and adapter outcomes. Model revision
+identifiers, prompts, method code, comparator, executors, endpoint, gates, and
+analysis hashes match the pre-confirmation lock. Invalid sources and mutations remain visible in the released
+label table, and all planned program outcomes remain in arm denominators until the
+common validity filter is applied.
+
+\section{Discussion}
+
+The main practical result is conditional. When a maintainer has a reliable
+boundary diagnosis and retained successful provenance, the repair decision need
+not become a whole-Skill rewrite. Rely gaps require restoring the causal prefix,
+not merely satisfying one abstract predicate. Destructive calls must be guarded
+before they fire when compensation may be impossible. Role failures can be
+repaired by a witnessed consumer invocation rather than free-form command
+generation. These mechanisms explain why contract-only adjacency and local LLM
+selection can underperform despite receiving the same diagnosed slot.
+
+Whole-chain rollback remains important. It can recover ordinary task success and
+may be preferable when provenance is cheap to replay, independent changes need not
+be preserved, or the diagnosis is uncertain. CGBAS contributes a different point
+in the engineering tradeoff: it preserves unaffected call identities and exposes
+exactly what was inserted or suppressed. Call locality should not be confused
+with runtime economy, because a missing producer can require a long witness prefix.
+
+The result also suggests a lifecycle architecture. Composition diagnostics can
+emit a typed boundary and evidence; a provenance store can supply compatible
+witness slices; an adapter compiler can produce a versioned invocation wrapper;
+and release gates can replay both conflicts and healthy controls. The immutable
+component and explicit adapter make rollback, audit, and later garbage collection
+simpler than silently editing a shared Skill.
+
+\section{Threats to Validity}
+
+\paragraph{Construct validity.}
+The four mutations are controlled interface regressions generated from successful
+traces. They do not estimate the prevalence of those causes in production. Causal
+labels require native candidate failure and matched correction success, but the
+same mutation operators were used in development and confirmation. The evidence
+therefore supports task transfer, not operator discovery.
+
+\paragraph{Information advantage.}
+CGBAS receives a correct diagnosis and a successful witness catalog. This is
+appropriate for the retained-provenance maintenance setting but stronger than the
+information available after an arbitrary failure. The LLM comparators receive the
+same catalog, diagnosis, and operation set; they are not general autonomous agents.
+
+\paragraph{External validity.}
+ALFWorld and ScienceWorld provide deterministic text interfaces, native goals,
+and replayable resets. Production APIs may drift, exhibit side effects, or lack
+exact reset and outcome oracles. ScienceWorld confirmation covers one eligible
+family after strict zero-overlap exclusion. Results should be extended to tools,
+web tasks, and longer asynchronous compositions before broader claims.
+
+\paragraph{Statistical validity.}
+Derived conflict instances are not independent; all inference clusters by source
+task and stratifies by family/environment. Nevertheless, 74 roster tasks are
+modest, and class-specific estimates are less precise than the primary aggregate.
+Thresholds and analysis were frozen before confirmation, and no failed source was
+replaced.
+
+\paragraph{Implementation validity.}
+Contracts are compiled from successful traces, and native command support is
+audited only for adapter-added actions. Original Skills may contain exploratory
+commands that are absent from an environment's returned action list. We report
+such behavior but do not attribute it to the adapter. Hash locks, append-only
+traces, initial-state signatures, and a standalone replay bundle reduce but do not
+eliminate implementation risk.
+
+\section{Conclusion}
+
+CGBAS repairs an already diagnosed LLM-agent Skill interface by compiling one
+provenance-backed boundary adapter. It restores omitted witness prefixes,
+specializes consumer roles, or prevents live-state destruction before execution,
+while retaining unaffected component identities. A frozen, zero-overlap native
+evaluation tests whether that mechanism exceeds no repair, contract-only local
+repair, whole-chain rollback under a locality constraint, and three schema-matched
+LLM selectors. The conclusion is intentionally scoped to controlled interface
+regressions with current successful provenance. Within that scope, repairing the
+boundary is an auditable alternative to rewriting reusable Skills; outside it,
+diagnosis uncertainty, provenance drift, irreversible effects, and long replay
+cost remain open problems.
+
+\bibliographystyle{plainnat}
+\bibliography{../references}
+\end{document}

@@ -1,0 +1,72 @@
+{
+  "status": "development_gate_passed",
+  "strongest_deployable_local_comparator": "llm_mistral7b_v03",
+  "causal_constrained_success": 1.0,
+  "comparator_causal_constrained_success": 0.515625,
+  "gain": 0.484375,
+  "class_repair_gains": {
+    "rely_gap": 1.0,
+    "role_mismatch": 1.0,
+    "clobber": 1.0,
+    "stale_validation": 1.0
+  },
+  "class_differences_vs_strongest_comparator": {
+    "rely_gap": 0.4457831325301205,
+    "role_mismatch": 1.0,
+    "clobber": 0.0,
+    "stale_validation": 0.0888888888888889
+  },
+  "environment_repair_gains": {
+    "alfworld": 0.7239819004524887,
+    "scienceworld": 0.5274725274725275
+  },
+  "control_loss": 0.0,
+  "checks": {
+    "minimum_180_causal_conflicts": true,
+    "minimum_60_controls": true,
+    "minimum_0_75_constrained_success": true,
+    "minimum_15_point_gain": true,
+    "positive_repair_gain_every_conflict_class": true,
+    "positive_repair_gain_both_environments": true,
+    "control_loss_at_most_2_points": true,
+    "minimum_0_95_adapter_command_support": true,
+    "whole_chain_rollback_excluded_from_local_comparators": true
+  },
+  "all_development_arms": {
+    "cgba": {
+      "causal_native_success": 1.0,
+      "causal_constrained_success": 1.0,
+      "control_native_success": 1.0
+    },
+    "no_repair": {
+      "causal_native_success": 0.0,
+      "causal_constrained_success": 0.0,
+      "control_native_success": 1.0
+    },
+    "pairwise_contract": {
+      "causal_native_success": 0.1015625,
+      "causal_constrained_success": 0.09765625,
+      "control_native_success": 1.0
+    },
+    "whole_chain_rollback": {
+      "causal_native_success": 1.0,
+      "causal_constrained_success": 0.0,
+      "control_native_success": 1.0
+    },
+    "llm_qwen3_4b": {
+      "causal_native_success": 0.3515625,
+      "causal_constrained_success": 0.3515625,
+      "control_native_success": 1.0
+    },
+    "llm_phi4_mini": {
+      "causal_native_success": 0.46484375,
+      "causal_constrained_success": 0.46484375,
+      "control_native_success": 1.0
+    },
+    "llm_mistral7b_v03": {
+      "causal_native_success": 0.515625,
+      "causal_constrained_success": 0.515625,
+      "control_native_success": 1.0
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "status": "release_verified",
+  "roster_tasks": 74,
+  "public_incidents": 349,
+  "program_arms": 7,
+  "confirmation_status": "confirmation_gate_passed",
+  "method_lock_sha256": "4d6dcda267fe972d2c165ee1493f335e97082dd890dbab9d5840f751fcff0cda",
+  "confirmation_summary_sha256": "8b9bc1b5f284c0507f6b71ce7450d5a9d445a0a0b202800a900b41c88c28f5ab",
+  "english_pdf_sha256": "b7cd777a28004765c4ed66383940dbe9d117830084a33bfd3382949e8695d059",
+  "chinese_pdf_sha256": "c8faffc5da6d549142c6f91d965a721db15ce409f14c5c82713f88f1438630f1"
+}

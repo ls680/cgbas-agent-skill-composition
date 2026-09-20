@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "compositions": 403,
+  "native_successes": 403,
+  "technical_errors": 0,
+  "initial_state_matches": 403,
+  "invalid_actions": 86,
+  "wrapper_skips": 44,
+  "by_environment": {
+    "alfworld": 221,
+    "scienceworld": 182
+  },
+  "outcomes_sha256": "7721d8829533a17749075324251545ff75abfe8b1b5f53df79d1f395c9197670"
+}

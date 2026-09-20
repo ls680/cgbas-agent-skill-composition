@@ -1,0 +1,10 @@
+{
+  "status": "confirmation_programs_frozen_before_candidate_or_adapter_outcomes",
+  "arm": "pairwise_contract",
+  "records": 349,
+  "synthesized": 66,
+  "hidden_labels_accessed": false,
+  "native_outcomes_accessed": false,
+  "public_incidents_sha256": "6d88989e86f7cdc5bd4a2c8c569bb26ccfa48a9f4894d0bfcb6e05a10006cbc9",
+  "programs_sha256": "b3b7904cbf82e51d5692580a1a89b18e447e5f63f1f0b25ce95edda073298c78"
+}

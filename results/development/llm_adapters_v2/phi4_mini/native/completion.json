@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "arm": "llm_phi4_mini_v2",
+  "compositions": 403,
+  "native_successes": 266,
+  "technical_errors": 0,
+  "initial_state_matches": 403,
+  "unsupported_adapter_commands": 0,
+  "by_environment": {
+    "alfworld": 221,
+    "scienceworld": 182
+  },
+  "outcomes_sha256": "c8bd368f63be71e863d83eb5905db013ec06296553858b80c5048a9daeae0837"
+}

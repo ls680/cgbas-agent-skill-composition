@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "arm": "llm_mistral7b_v03_v2",
+  "compositions": 403,
+  "native_successes": 279,
+  "technical_errors": 0,
+  "initial_state_matches": 403,
+  "unsupported_adapter_commands": 0,
+  "by_environment": {
+    "alfworld": 221,
+    "scienceworld": 182
+  },
+  "outcomes_sha256": "bb11c96511e6b8faf924452f9d7cc0b148568984f03056a5db7ee82d97e7bd28"
+}

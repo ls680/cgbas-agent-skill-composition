@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "comparator": "replace_candidate_with_retained_successful_chain",
+  "records": 403,
+  "public_incidents_sha256": "5250ce44ba865efbcf6500c04083f1c0ddd0d99cdd9f9e55950255d0ae5a6592",
+  "programs_sha256": "0a6ce1c2d046c78c96760cbe7d71bcd2a93c4960d7088db2562b1d12e0ec26b7",
+  "hidden_labels_accessed": false,
+  "native_outcomes_accessed": false
+}

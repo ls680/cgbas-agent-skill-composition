@@ -1,0 +1,18 @@
+{
+  "status": "confirmation_programs_frozen_before_candidate_or_adapter_outcomes",
+  "arm": "llm_phi4_mini",
+  "model": {
+    "id": "microsoft/Phi-4-mini-instruct",
+    "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+    "label": "phi4_mini"
+  },
+  "records": 349,
+  "valid_outputs": 349,
+  "synthesized_programs": 249,
+  "peak_cuda_memory_gib": 8.771484375,
+  "elapsed_seconds_this_process": 346.99064776999876,
+  "hidden_labels_accessed": false,
+  "native_outcomes_accessed": false,
+  "responses_sha256": "94769d7095d780b542e40252daec8945aaff6fd6b53014f1133d87f234f49489",
+  "programs_sha256": "22d2015e4f90a2c12d1bcd76bf8bc14c612430b15e95f45877d5aa4fc0caaf58"
+}

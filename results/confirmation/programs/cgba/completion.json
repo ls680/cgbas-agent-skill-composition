@@ -1,0 +1,10 @@
+{
+  "status": "confirmation_programs_frozen_before_candidate_or_adapter_outcomes",
+  "arm": "cgba",
+  "records": 349,
+  "synthesized": 349,
+  "hidden_labels_accessed": false,
+  "native_outcomes_accessed": false,
+  "public_incidents_sha256": "6d88989e86f7cdc5bd4a2c8c569bb26ccfa48a9f4894d0bfcb6e05a10006cbc9",
+  "programs_sha256": "41569955b029433df4a979e525e762b5737328647150c4cf122d5f8f0f458b16"
+}

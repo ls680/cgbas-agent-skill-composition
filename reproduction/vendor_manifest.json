@@ -1,0 +1,19 @@
+{
+  "status": "exact_source_snapshots_for_paper13_external_code_dependencies",
+  "files": {
+    "01_skilllineage/revisions/04_state_matched_execution/state_check.py": "eec45388ea6e5bbd949f1f41980a093d467be01e68ca8da9becc45b985fbe65e",
+    "01_skilllineage/src/skilllineage/__init__.py": "432e437015a4c2b40261d37ff403089310a56e23c42e1f00ae57be94127838eb",
+    "01_skilllineage/src/skilllineage/interactive_envs.py": "bf31cb3078dee54c7c96c2425a44103c846b02d127b37323fc90bac91b7706a4",
+    "06_rely_guarantee_diagnosis/scripts/build_development_specs.py": "067f2bb10fa240e38b8e0fadb4ada149d7cb37d71e8030d0be00b51aef71c0e3",
+    "06_rely_guarantee_diagnosis/scripts/run_development_native.py": "80e5e4e0ddc74089ed194e72e85c88a5642b91e000df330213741e4fec3ab4df",
+    "06_rely_guarantee_diagnosis/src/mrgd/__init__.py": "65ed4cea464698c52c98ddfae94a1b22e4ef1cdffdfa84093e0a6abd0673d029",
+    "06_rely_guarantee_diagnosis/src/mrgd/actions.py": "9cbd6d3c7c1b6360c9038455e2d071aa119146bb72fd836a1a6d41d5351eee9d",
+    "06_rely_guarantee_diagnosis/src/mrgd/contracts.py": "4df609a5ac5c23bbaec45c980638a54c1da5d4e036e6217839fe42ffa7883d3d",
+    "06_rely_guarantee_diagnosis/src/mrgd/diagnose.py": "8bb7fd21c499acd10bf1749bf1bf97e270ab943ab2c6501e7ce82e19032cf84b"
+  },
+  "excluded_external_binary": {
+    "path": "01_skilllineage/research/validation/vendor/scienceworld-e8216d6.jar",
+    "sha256": "e77b0fee7d68abe3ca5b12e57d86e2bfe7603f20c5200da0b0f085939faeb465",
+    "reason": "Obtain under upstream ScienceWorld terms; do not relicense in this repository."
+  }
+}

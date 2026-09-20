@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "model": {
+    "id": "microsoft/Phi-4-mini-instruct",
+    "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+    "label": "phi4_mini"
+  },
+  "records": 403,
+  "valid_outputs": 401,
+  "synthesized_programs": 365,
+  "peak_cuda_memory_gib": 7.98828125,
+  "elapsed_seconds_this_process": 435.1827588980086,
+  "responses_sha256": "367fdfef7b57b32fb09ac87bbe0bf70df71bc3ad9407c3ab0f6e9a848e9b7adc",
+  "programs_sha256": "5dcd9d925b63e530d2d3b7b8ca286a9e95ca4e6f0ec43243ecb5dbc42a2b7102"
+}

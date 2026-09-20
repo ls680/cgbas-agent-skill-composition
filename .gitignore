@@ -1,0 +1,38 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# LaTeX intermediates; keep manuscript PDFs.
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.xdv
+
+# Third-party caches and weights must remain on the data disk.
+.cache/
+huggingface/
+models/
+checkpoints/
+
+# Built archives are reproducible from tracked inputs.
+artifacts/*.tar.gz
+artifacts/*.zip
+
+# Credentials and local deployment material
+.env
+*.token
+*.pem
+*.key
+*.secret
+
+# Local JSS compilation output is reproducible and not needed in source control
+submission/*/build/

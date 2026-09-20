@@ -1,0 +1,63 @@
+{
+  "status": "static_development_analyzed",
+  "records": 403,
+  "diagnosis_exact_rate": 1.0,
+  "synthesis_rate": 1.0,
+  "locality_rate": 1.0,
+  "healthy_unchanged_rate": 1.0,
+  "adapter_action_cost": {
+    "mean": 3.806451612903226,
+    "maximum": 66,
+    "by_class": {
+      "clobber": {
+        "mean": 0.0,
+        "maximum": 0
+      },
+      "no_conflict": {
+        "mean": 0.0,
+        "maximum": 0
+      },
+      "rely_gap": {
+        "mean": 16.49397590361446,
+        "maximum": 66
+      },
+      "role_mismatch": {
+        "mean": 1.9879518072289157,
+        "maximum": 7
+      },
+      "stale_validation": {
+        "mean": 0.0,
+        "maximum": 0
+      }
+    }
+  },
+  "by_class": {
+    "clobber": {
+      "n": 45,
+      "diagnosis_exact_rate": 1.0,
+      "synthesis_rate": 1.0
+    },
+    "no_conflict": {
+      "n": 147,
+      "diagnosis_exact_rate": 1.0,
+      "synthesis_rate": 1.0
+    },
+    "rely_gap": {
+      "n": 83,
+      "diagnosis_exact_rate": 1.0,
+      "synthesis_rate": 1.0
+    },
+    "role_mismatch": {
+      "n": 83,
+      "diagnosis_exact_rate": 1.0,
+      "synthesis_rate": 1.0
+    },
+    "stale_validation": {
+      "n": 45,
+      "diagnosis_exact_rate": 1.0,
+      "synthesis_rate": 1.0
+    }
+  },
+  "errors": [],
+  "native_outcomes_used": false
+}

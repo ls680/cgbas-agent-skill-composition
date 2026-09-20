@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "compositions": 399,
+  "native_successes": 325,
+  "technical_errors": 0,
+  "initial_state_matches": 399,
+  "invalid_actions": 1481,
+  "by_environment": {
+    "alfworld": 221,
+    "scienceworld": 178
+  },
+  "outcomes_sha256": "a8e3568f1788cef543c07238edbf5dd5263447f7f5c20a1c797f601c1fe99238"
+}

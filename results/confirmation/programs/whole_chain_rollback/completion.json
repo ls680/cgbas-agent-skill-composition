@@ -1,0 +1,10 @@
+{
+  "status": "confirmation_programs_frozen_before_candidate_or_adapter_outcomes",
+  "arm": "whole_chain_rollback",
+  "records": 349,
+  "synthesized": 0,
+  "hidden_labels_accessed": false,
+  "native_outcomes_accessed": false,
+  "public_incidents_sha256": "6d88989e86f7cdc5bd4a2c8c569bb26ccfa48a9f4894d0bfcb6e05a10006cbc9",
+  "programs_sha256": "42b4039eb4e36863cbca7966661683ef6501287cf96f83e84023b20acdc1daee"
+}

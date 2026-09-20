@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "specs": 349,
+  "native_replays": 627,
+  "candidate_failures": 226,
+  "matched_correction_successes": 278,
+  "technical_errors": 0,
+  "initial_state_matches": 627,
+  "by_environment": {
+    "alfworld": 179,
+    "scienceworld": 170
+  },
+  "by_intended_class": {
+    "no_conflict": 71,
+    "rely_gap": 71,
+    "clobber": 68,
+    "role_mismatch": 71,
+    "stale_validation": 68
+  },
+  "outcomes_sha256": "8272952e13747ef02bd75e8ff059c5c6be8e23b82513abbbc723fcdec60da561"
+}

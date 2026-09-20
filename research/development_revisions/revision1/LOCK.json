@@ -1,0 +1,13 @@
+{
+  "status": "completed_and_rejected_before_revision_2",
+  "method_sha256": "9171bc9cc99429815336bac25febff0ef790f2acae454164ab007c5d957e523d",
+  "static_predictions_sha256": "73d5f93abbf005eada410c5e0eae72aa6a19ffa5d3390dbd019e0b056df8f2c4",
+  "native_outcomes_sha256": "a8e3568f1788cef543c07238edbf5dd5263447f7f5c20a1c797f601c1fe99238",
+  "synthesized_incidents": 399,
+  "omitted_abstentions_detected": 4,
+  "native_conflict_successes": 178,
+  "native_conflict_incidents": 252,
+  "native_conflict_success_rate": 0.7063492063492064,
+  "registered_minimum_success_rate": 0.75,
+  "advanced_to_confirmation": false
+}

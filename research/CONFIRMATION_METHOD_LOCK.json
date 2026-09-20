@@ -1,0 +1,55 @@
+{
+  "status": "method_and_comparators_frozen_before_confirmation_roster",
+  "development_revision": 2,
+  "remaining_revision_budget": 1,
+  "primary_method": "cgba",
+  "primary_comparator": "llm_mistral7b_v03",
+  "primary_endpoint": "constrained_native_repair_success",
+  "development_gate_sha256": "1e01ef3555b52977130419d91555dfa295ee80efe8674469dccc24d455848ba1",
+  "prior_exclusions_sha256": "90733855085c7b13946b38eebe4aeafe921c2d2c4c191c144e4ce2eb2596c1cf",
+  "model_revisions": [
+    {
+      "id": "Qwen/Qwen3-4B-Instruct-2507",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "label": "qwen3_4b"
+    },
+    {
+      "id": "microsoft/Phi-4-mini-instruct",
+      "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+      "label": "phi4_mini"
+    },
+    {
+      "id": "mistralai/Mistral-7B-Instruct-v0.3",
+      "revision": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+      "label": "mistral7b_v03"
+    }
+  ],
+  "file_sha256": {
+    "configs/models.json": "d5a57c947f27ea5dc2ed1119fe50ede354b7d60bfb857e59d3f917368765c9ca",
+    "configs/confirmation.json": "5ff080e5d9bd91edac37151e2ddc0d939a63e77d9adc0d760090acc36695a687",
+    "research/PROTOCOL.md": "4053a7ae38181292706900c14bcf641caeaf25f4829e892057973d1af49e30bc",
+    "research/development_revisions/REVISION2.md": "599fc6098a5cc24611ecc53562754ac3589c24200d99278c696203fa7229b107",
+    "src/cgba/adapters.py": "ee94eeb96b3b109856b1e61a50917a4be83eb9f81d53a9ac42eba811590d7ac5",
+    "src/cgba/programs.py": "4163eaea4288355918a016af2e7989507c4282ee8fb162e018d0f19c522534a2",
+    "src/cgba/runtime.py": "213317df875c099ebcef2661412d7696b773e327f6dae203cf177c72e686631e",
+    "scripts/analyze_development_native.py": "d1fed9dc46c82899b7aedcf3a9e5ebafd4706abbb5893d4b0bdb7d1fee95afc6",
+    "scripts/build_prior_exclusions.py": "b7a1a55e57b15918e3d17bb11af9fac0e45a3a7037f073b09e7a0581507a5c37",
+    "scripts/freeze_confirmation_roster.py": "87afe07afbc648d5bc24952d01171e766941186af89b740aa978043af465c3e2",
+    "scripts/collect_confirmation_oracles.py": "d0b48ba244ed95c054d04179c1b0acb3fc5d596cad66757c520be563975269b8",
+    "scripts/generate_confirmation_incidents.py": "559c30eac98f04e360514dfc0b752a916b3c6c75e85c572aea30f694fa47a762",
+    "scripts/build_confirmation_programs.py": "d54559998dfcca1ee412fbe13ff25eed51e8207186e452be3c29e80375ba6737",
+    "scripts/run_llm_adapter.py": "324a5c90df645700e40acd785fea437ddc51b4d631c6dfcdc0c2ccfde01996b8",
+    "scripts/run_programs_native.py": "e0ffbc02c01ae72af95fba3f5ae622d78c0472ca0f36dc3d7b3f3ca43fa9105a",
+    "scripts/run_confirmation_llm_adapter.py": "cabbb051cd9f0c9cb3df3376a0ac6ff1cd578a53be394df76593aa3db9e458b9",
+    "scripts/analyze_confirmation.py": "fcf7efc0530651606b3d1f95740f552a86990a4b81bacc14deaa2a194db4763c",
+    "scripts/run_confirmation_causal_native.py": "4ac266bd306b3b236e2a055f07cacfe405eea90ffcc82957a9bb7199666ebe9c",
+    "scripts/run_confirmation_programs_native.py": "978809b808a8ae33e8275e5d10614b5ea495facc6adcd7b71e26aa04f8457503",
+    "scripts/run_confirmation_remote.sh": "c02109dc54b60d4c32933bf3a1d7ea24867980da6c23374f86d65e4b67714dc7",
+    "../06_rely_guarantee_diagnosis/scripts/build_development_specs.py": "067f2bb10fa240e38b8e0fadb4ada149d7cb37d71e8030d0be00b51aef71c0e3",
+    "../06_rely_guarantee_diagnosis/scripts/run_development_native.py": "80e5e4e0ddc74089ed194e72e85c88a5642b91e000df330213741e4fec3ab4df",
+    "../01_skilllineage/src/skilllineage/interactive_envs.py": "bf31cb3078dee54c7c96c2425a44103c846b02d127b37323fc90bac91b7706a4",
+    "../01_skilllineage/revisions/04_state_matched_execution/state_check.py": "eec45388ea6e5bbd949f1f41980a093d467be01e68ca8da9becc45b985fbe65e",
+    "../01_skilllineage/research/validation/vendor/scienceworld-e8216d6.jar": "e77b0fee7d68abe3ca5b12e57d86e2bfe7603f20c5200da0b0f085939faeb465"
+  },
+  "confirmation_rule": "No code, prompt, model revision, comparator, endpoint, gate, roster, or analysis change after this lock without invalidating confirmation."
+}

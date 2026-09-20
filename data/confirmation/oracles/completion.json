@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "tasks": 74,
+  "successful_references": 71,
+  "failed_references": 3,
+  "by_environment": {
+    "alfworld": 40,
+    "scienceworld": 34
+  },
+  "trajectories_sha256": "485f0203a28da79c74564a21c01f90bec2635d8081adecc464ae2a64ef35f940"
+}

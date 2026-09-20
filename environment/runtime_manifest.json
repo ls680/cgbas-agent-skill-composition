@@ -1,0 +1,26 @@
+{
+  "captured_at": "2026-09-09 Asia/Shanghai",
+  "operating_system": "Ubuntu 22.04.5 LTS",
+  "python": "3.12.3",
+  "java": "OpenJDK 17.0.20",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "gpu_memory_mib": 24576,
+  "nvidia_driver": "595.71.05",
+  "pytorch": "2.8.0+cu128",
+  "pytorch_cuda_build": "12.8",
+  "packages": {
+    "accelerate": "1.14.0",
+    "alfworld": "0.4.2",
+    "jericho": "3.3.1",
+    "numpy": "2.3.2",
+    "pytest": "8.4.2",
+    "safetensors": "0.8.0",
+    "scipy": "1.18.1",
+    "scienceworld": "1.2.3",
+    "sentencepiece": "0.2.2",
+    "textworld": "1.7.0",
+    "transformers": "4.57.6"
+  },
+  "model_revisions_file": "configs/models.json",
+  "external_dependency_hashes_file": "research/CONFIRMATION_METHOD_LOCK.json"
+}

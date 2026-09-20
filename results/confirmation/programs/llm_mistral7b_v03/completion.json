@@ -1,0 +1,18 @@
+{
+  "status": "confirmation_programs_frozen_before_candidate_or_adapter_outcomes",
+  "arm": "llm_mistral7b_v03",
+  "model": {
+    "id": "mistralai/Mistral-7B-Instruct-v0.3",
+    "revision": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+    "label": "mistral7b_v03"
+  },
+  "records": 349,
+  "valid_outputs": 349,
+  "synthesized_programs": 199,
+  "peak_cuda_memory_gib": 17.5390625,
+  "elapsed_seconds_this_process": 550.9287375039421,
+  "hidden_labels_accessed": false,
+  "native_outcomes_accessed": false,
+  "responses_sha256": "c0d8eb36c5175342169776344ac87b15687fe5faf52565ea963a42a3184fe35a",
+  "programs_sha256": "a311a519c00ce4c1f5fb23448e555a60ca7312b7542b7e0ee21bfda3b7cac8c2"
+}

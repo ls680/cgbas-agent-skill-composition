@@ -1,0 +1,24 @@
+{
+  "status": "paper13_confirmation_local_llm_adapter_before_native_outcomes",
+  "output_schema_revision": 2,
+  "arm": "llm_mistral7b_v03",
+  "model": {
+    "id": "mistralai/Mistral-7B-Instruct-v0.3",
+    "revision": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+    "label": "mistral7b_v03"
+  },
+  "seed": 0,
+  "maximum_generation_tokens": 192,
+  "input_sha256": {
+    "models": "d5a57c947f27ea5dc2ed1119fe50ede354b7d60bfb857e59d3f917368765c9ca",
+    "confirmation_config": "5ff080e5d9bd91edac37151e2ddc0d939a63e77d9adc0d760090acc36695a687",
+    "method_lock": "4d6dcda267fe972d2c165ee1493f335e97082dd890dbab9d5840f751fcff0cda",
+    "public_incidents": "6d88989e86f7cdc5bd4a2c8c569bb26ccfa48a9f4894d0bfcb6e05a10006cbc9",
+    "development_prompt_runner": "324a5c90df645700e40acd785fea437ddc51b4d631c6dfcdc0c2ccfde01996b8",
+    "program_builder": "4163eaea4288355918a016af2e7989507c4282ee8fb162e018d0f19c522534a2",
+    "system": "9a69cd495af89eee96ae5df4b66a7558acab457bcf683018e38f42daa958a1a0"
+  },
+  "hidden_labels_accessed": false,
+  "matched_correction_programs_accessed": false,
+  "native_outcomes_accessed": false
+}

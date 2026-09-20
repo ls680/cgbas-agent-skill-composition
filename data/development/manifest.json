@@ -1,0 +1,22 @@
+{
+  "status": "paper06_exposed_evidence_partitioned_for_paper13_development",
+  "incidents": 403,
+  "tasks": 83,
+  "classes": {
+    "no_conflict": 147,
+    "rely_gap": 83,
+    "clobber": 45,
+    "role_mismatch": 83,
+    "stale_validation": 45
+  },
+  "environments": {
+    "alfworld": 221,
+    "scienceworld": 182
+  },
+  "matched_correction_programs_copied": false,
+  "source_sha256": {
+    "public_compositions": "af3acb3679c0b39b4b9cebdbbc76fa3030713a2bcb52615a22b681ea22fbb411",
+    "causal_labels": "c8800cb041333a37280bda8dbfed72fb047eabf32b3bba924dd40db717235ad3",
+    "preparer": "e1cf0570c2a758ef3f781655bb5c0ea6ed840786a0696f4ee1a029c12651e773"
+  }
+}

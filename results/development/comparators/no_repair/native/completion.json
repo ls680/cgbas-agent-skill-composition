@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "arm": "no_repair",
+  "compositions": 403,
+  "native_successes": 147,
+  "technical_errors": 0,
+  "initial_state_matches": 403,
+  "unsupported_adapter_commands": 0,
+  "by_environment": {
+    "alfworld": 221,
+    "scienceworld": 182
+  },
+  "outcomes_sha256": "0eaf489b5f3855fc9b1b220c24e8e3eff899ba967927fb4c4d45fb6e4df1406c"
+}

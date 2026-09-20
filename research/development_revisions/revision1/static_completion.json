@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "incidents": 403,
+  "synthesized": 399,
+  "abstained": 4,
+  "input_sha256": "5250ce44ba865efbcf6500c04083f1c0ddd0d99cdd9f9e55950255d0ae5a6592",
+  "method_sha256": "9171bc9cc99429815336bac25febff0ef790f2acae454164ab007c5d957e523d",
+  "outputs_sha256": "73d5f93abbf005eada410c5e0eae72aa6a19ffa5d3390dbd019e0b056df8f2c4",
+  "hidden_label_file_accessed": false,
+  "matched_correction_program_accessed": false
+}

@@ -1,0 +1,21 @@
+{
+  "maximum_generation_tokens": 192,
+  "seed": 0,
+  "models": [
+    {
+      "id": "Qwen/Qwen3-4B-Instruct-2507",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "label": "qwen3_4b"
+    },
+    {
+      "id": "microsoft/Phi-4-mini-instruct",
+      "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+      "label": "phi4_mini"
+    },
+    {
+      "id": "mistralai/Mistral-7B-Instruct-v0.3",
+      "revision": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+      "label": "mistral7b_v03"
+    }
+  ]
+}

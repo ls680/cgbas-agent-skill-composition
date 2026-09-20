@@ -1,0 +1,14 @@
+{
+  "status": "paper13_development_comparator_native_replay",
+  "arm": "pairwise_contract",
+  "records": 403,
+  "input_sha256": {
+    "programs": "38df70ded39005405796d07ff8dc782244a58be6e037adbf355ea9d3c35f955a",
+    "public_incidents": "5250ce44ba865efbcf6500c04083f1c0ddd0d99cdd9f9e55950255d0ae5a6592",
+    "source_oracles": "f84d026acd058ff70b9bce9ace46ed37eeeccd46523da5a784a3e2cb13bc6c1d",
+    "runner": "e0ffbc02c01ae72af95fba3f5ae622d78c0472ca0f36dc3d7b3f3ca43fa9105a",
+    "runtime": "213317df875c099ebcef2661412d7696b773e327f6dae203cf177c72e686631e"
+  },
+  "hidden_labels_accessed": false,
+  "matched_correction_programs_accessed": false
+}

@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "arm": "llm_qwen3_4b_v2",
+  "compositions": 403,
+  "native_successes": 237,
+  "technical_errors": 0,
+  "initial_state_matches": 403,
+  "unsupported_adapter_commands": 0,
+  "by_environment": {
+    "alfworld": 221,
+    "scienceworld": 182
+  },
+  "outcomes_sha256": "05a9e13217b778d531b6193a638ec8f5c5f9d1ac25fd131e9743d8023e58c27b"
+}

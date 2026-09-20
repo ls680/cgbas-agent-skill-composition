@@ -1,0 +1,10 @@
+{
+  "status": "completed",
+  "comparator": "pairwise_contract_without_provenance_or_global_liveness",
+  "synthesized": 101,
+  "records": 403,
+  "public_incidents_sha256": "5250ce44ba865efbcf6500c04083f1c0ddd0d99cdd9f9e55950255d0ae5a6592",
+  "programs_sha256": "38df70ded39005405796d07ff8dc782244a58be6e037adbf355ea9d3c35f955a",
+  "hidden_labels_accessed": false,
+  "native_outcomes_accessed": false
+}

@@ -1,0 +1,39 @@
+{
+  "title": "Repair the Boundary, Not the Skills: Contract-Guided Adapter Synthesis for LLM-Agent Skill Composition (Software and Reproducibility Artifacts)",
+  "upload_type": "software",
+  "description": "<p>This versioned archive contains the implementation, frozen protocols, native execution records, tests, analyses, manuscript sources, and reproducibility instructions for Contract-Guided Boundary Adapter Synthesis (CGBAS).</p><p>CGBAS repairs an already diagnosed cross-Skill interface conflict by compiling a witness-backed boundary adapter without rewriting the component Skills. The independent confirmation contains 74 identifier-disjoint ALFWorld and ScienceWorld tasks, 226 state-matched causal conflicts, and 71 healthy controls. CGBAS achieved 100.0% constrained native repair success versus 49.6% for the frozen strongest local comparator, a 50.4-point gain (95% task-clustered bootstrap CI 46.6--54.6; two-sided task sign-randomization p = 0.00001) with zero healthy-control loss.</p><p>The archive includes integrity manifests and CPU-only verification scripts. Third-party ALFWorld data, ScienceWorld assets, and model weights are not redistributed; pinned identifiers, revisions, paths, licenses, and integrity checks are provided instead.</p>",
+  "creators": [
+    {
+      "name": "Song, Liang",
+      "affiliation": "Business School, Xi'an International University",
+      "orcid": "0009-0002-6109-0639"
+    },
+    {
+      "name": "Zhai, Jiabao",
+      "affiliation": "School of Management and Economics, North China University of Water Resources and Electric Power"
+    }
+  ],
+  "publication_date": "2026-09-20",
+  "access_right": "open",
+  "license": "apache-2.0",
+  "version": "0.1.0",
+  "language": "eng",
+  "keywords": [
+    "LLM agents",
+    "agent skills",
+    "skill composition",
+    "boundary adapter synthesis",
+    "design by contract",
+    "software maintenance",
+    "ALFWorld",
+    "ScienceWorld"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/ls680/cgbas-agent-skill-composition",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Original project materials are released under Apache-2.0. Third-party dependencies and benchmark assets remain under their upstream licenses and are not redistributed."
+}

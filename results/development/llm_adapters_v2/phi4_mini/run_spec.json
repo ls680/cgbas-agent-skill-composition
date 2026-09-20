@@ -1,0 +1,16 @@
+{
+  "status": "paper13_development_local_llm_adapter",
+  "output_schema_revision": 2,
+  "model": {
+    "id": "microsoft/Phi-4-mini-instruct",
+    "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+    "label": "phi4_mini"
+  },
+  "seed": 0,
+  "maximum_generation_tokens": 192,
+  "public_incidents_sha256": "5250ce44ba865efbcf6500c04083f1c0ddd0d99cdd9f9e55950255d0ae5a6592",
+  "system_sha256": "9a69cd495af89eee96ae5df4b66a7558acab457bcf683018e38f42daa958a1a0",
+  "hidden_labels_accessed": false,
+  "matched_correction_programs_accessed": false,
+  "native_outcomes_accessed": false
+}

@@ -1,0 +1,5 @@
+Repairs diagnosed Skill interfaces without rewriting component artifacts.
+Confirms 100.0% constrained native success on 226 causal conflicts.
+Beats the frozen strongest local comparator by 50.4 percentage points.
+Preserves all 71 healthy controls across ALFWorld and ScienceWorld.
+Releases failed revisions, paired traces, locked inference, and 3090 replay.

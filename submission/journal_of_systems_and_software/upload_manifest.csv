@@ -1,0 +1,6 @@
+file,role,required,notes
+jss_main_manuscript.pdf,Main manuscript,yes,Compiled English manuscript with embedded figures/tables and declarations
+jss_main_manuscript_latex.zip,Editable source,usually optional at initial upload,LaTeX source plus bibliography tables and result macros
+HIGHLIGHTS.txt,Highlights,recommended,Five concise bullets; upload as plain text if the portal requests Highlights
+jss_cover_letter.pdf,Cover letter,recommended,Targeted letter to the JSS editor
+JSS_PRE_SUBMISSION_BLOCKERS.md,Internal checklist,no,Do not upload; DOI and permanent URL must be added before submission

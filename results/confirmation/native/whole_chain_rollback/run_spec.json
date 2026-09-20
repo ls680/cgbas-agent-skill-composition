@@ -1,0 +1,16 @@
+{
+  "status": "paper13_independent_confirmation_program_native",
+  "arm": "whole_chain_rollback",
+  "records": 349,
+  "input_sha256": {
+    "config": "5ff080e5d9bd91edac37151e2ddc0d939a63e77d9adc0d760090acc36695a687",
+    "method_lock": "4d6dcda267fe972d2c165ee1493f335e97082dd890dbab9d5840f751fcff0cda",
+    "programs": "42b4039eb4e36863cbca7966661683ef6501287cf96f83e84023b20acdc1daee",
+    "public_incidents": "6d88989e86f7cdc5bd4a2c8c569bb26ccfa48a9f4894d0bfcb6e05a10006cbc9",
+    "source_oracles": "485f0203a28da79c74564a21c01f90bec2635d8081adecc464ae2a64ef35f940",
+    "causal_outcomes": "8272952e13747ef02bd75e8ff059c5c6be8e23b82513abbbc723fcdec60da561",
+    "runner": "978809b808a8ae33e8275e5d10614b5ea495facc6adcd7b71e26aa04f8457503",
+    "shared_executor": "e0ffbc02c01ae72af95fba3f5ae622d78c0472ca0f36dc3d7b3f3ca43fa9105a",
+    "runtime": "213317df875c099ebcef2661412d7696b773e327f6dae203cf177c72e686631e"
+  }
+}

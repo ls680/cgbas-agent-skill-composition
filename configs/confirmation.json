@@ -1,0 +1,40 @@
+{
+  "status": "independent_contract_guided_boundary_adapter_confirmation",
+  "selection_seed": "cgba-confirmation-roster-20260909-v1",
+  "generation_seed": "cgba-confirmation-incidents-20260909-v1",
+  "analysis_seed": "cgba-confirmation-analysis-20260909-v1",
+  "alfworld_tasks_by_family": {
+    "pick_and_place_simple": 8,
+    "pick_clean_then_place_in_recep": 8,
+    "pick_cool_then_place_in_recep": 8,
+    "pick_heat_then_place_in_recep": 8,
+    "pick_two_obj_and_place": 8
+  },
+  "scienceworld_tasks_by_family": {
+    "use-thermometer": 34
+  },
+  "alfworld_official_splits": ["train"],
+  "max_steps": {"alfworld": 120, "scienceworld": 160},
+  "bootstrap_replicates": 10000,
+  "randomization_replicates": 100000,
+  "alpha": 0.01,
+  "gates": {
+    "minimum_tasks": 60,
+    "minimum_causal_conflicts": 180,
+    "minimum_controls": 60,
+    "minimum_per_conflict_class": 30,
+    "minimum_constrained_success": 0.75,
+    "minimum_gain_points": 15.0,
+    "maximum_control_loss_points": 2.0,
+    "maximum_randomization_p": 0.01
+  },
+  "paths": {
+    "inventory": "../01_skilllineage/research/validation/inventory_20260905.json",
+    "reserved_snapshot": "../01_skilllineage/research/validation/exposure_snapshot_20260905.json",
+    "scienceworld_jar": "../01_skilllineage/research/validation/vendor/scienceworld-e8216d6.jar",
+    "prior_exclusions": "data/confirmation/prior_exclusions.json",
+    "method_lock": "research/CONFIRMATION_METHOD_LOCK.json",
+    "roster": "data/confirmation/roster.json",
+    "oracles": "data/confirmation/oracles"
+  }
+}

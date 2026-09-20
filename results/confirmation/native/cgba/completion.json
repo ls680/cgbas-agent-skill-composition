@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "arm": "cgba",
+  "compositions": 349,
+  "native_successes": 349,
+  "technical_errors": 0,
+  "initial_state_matches": 349,
+  "unsupported_adapter_commands": 0,
+  "by_environment": {
+    "alfworld": 179,
+    "scienceworld": 170
+  },
+  "outcomes_sha256": "5579f953a456b5185c677bc9337d65c16283cf0c0b7d7eeffc2286af1a580985"
+}

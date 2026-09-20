@@ -1,0 +1,18 @@
+{
+  "status": "confirmation_programs_frozen_before_candidate_or_adapter_outcomes",
+  "arm": "llm_qwen3_4b",
+  "model": {
+    "id": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "label": "qwen3_4b"
+  },
+  "records": 349,
+  "valid_outputs": 349,
+  "synthesized_programs": 229,
+  "peak_cuda_memory_gib": 9.876953125,
+  "elapsed_seconds_this_process": 381.78481681784615,
+  "hidden_labels_accessed": false,
+  "native_outcomes_accessed": false,
+  "responses_sha256": "4b93696b5c8832f74a45aea79bce57452eb54726e2e11f5abe0d3d69441ea754",
+  "programs_sha256": "ff453422bb0b998feeb639559dc73cf0e88a11ec90886193bd3b0ae188961b94"
+}

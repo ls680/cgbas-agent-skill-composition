@@ -1,0 +1,19 @@
+{
+  "status": "confirmation_incidents_frozen_before_candidate_or_matched_outcomes",
+  "source_tasks": 71,
+  "specs": 349,
+  "public_records": 349,
+  "by_environment": {
+    "alfworld": 179,
+    "scienceworld": 170
+  },
+  "by_intended_class": {
+    "no_conflict": 71,
+    "rely_gap": 71,
+    "clobber": 68,
+    "role_mismatch": 71,
+    "stale_validation": 68
+  },
+  "specs_sha256": "6eb38ef341255e8d6722d221989d367e80649127ca7d48ac2cade0a3c1351d13",
+  "public_incidents_sha256": "6d88989e86f7cdc5bd4a2c8c569bb26ccfa48a9f4894d0bfcb6e05a10006cbc9"
+}
