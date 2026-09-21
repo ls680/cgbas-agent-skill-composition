@@ -9,8 +9,8 @@ authors:
     given-names: Jiabao
 repository-code: "https://github.com/ls680/cgbas-agent-skill-composition"
 license: Apache-2.0
-version: 0.1.0
-date-released: 2026-09-20
+version: 0.1.2
+date-released: 2026-09-21
 keywords:
   - LLM agents
   - agent skills

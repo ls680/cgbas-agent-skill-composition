@@ -13,10 +13,10 @@
       "affiliation": "School of Management and Economics, North China University of Water Resources and Electric Power"
     }
   ],
-  "publication_date": "2026-09-20",
+  "publication_date": "2026-09-21",
   "access_right": "open",
   "license": "apache-2.0",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "language": "eng",
   "keywords": [
     "LLM agents",
