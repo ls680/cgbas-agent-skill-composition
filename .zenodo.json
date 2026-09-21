@@ -4,7 +4,7 @@
   "description": "<p>This versioned archive contains the implementation, frozen protocols, native execution records, tests, analyses, manuscript sources, and reproducibility instructions for Contract-Guided Boundary Adapter Synthesis (CGBAS).</p><p>CGBAS repairs an already diagnosed cross-Skill interface conflict by compiling a witness-backed boundary adapter without rewriting the component Skills. The independent confirmation contains 74 identifier-disjoint ALFWorld and ScienceWorld tasks, 226 state-matched causal conflicts, and 71 healthy controls. CGBAS achieved 100.0% constrained native repair success versus 49.6% for the frozen strongest local comparator, a 50.4-point gain (95% task-clustered bootstrap CI 46.6--54.6; two-sided task sign-randomization p = 0.00001) with zero healthy-control loss.</p><p>The archive includes integrity manifests and CPU-only verification scripts. Third-party ALFWorld data, ScienceWorld assets, and model weights are not redistributed; pinned identifiers, revisions, paths, licenses, and integrity checks are provided instead.</p>",
   "creators": [
     {
-      "name": "Song, Liang",
+      "name": "Liang, Song",
       "affiliation": "Business School, Xi'an International University",
       "orcid": "0009-0002-6109-0639"
     },
